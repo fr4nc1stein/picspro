@@ -1,11 +1,11 @@
 <?php 
+ob_start();
+session_start();
+
 include('header.php');
+
 require_once 'lib/class.php';
 
-if($system->is_loggedin()!="")
-{
-	$system->redirect('home#?=login');
-}
 
 if(isset($_POST['btn-login']))
 {
@@ -16,7 +16,7 @@ if(isset($_POST['btn-login']))
 	@$hash=hash_hmac('sha512', $salt, $password);
 		
 	if($system->login($username,$hash))
-	{
+	{	
 		$system->redirect('home#?=login');
 	}
 	else
@@ -24,6 +24,10 @@ if(isset($_POST['btn-login']))
 		$error = "Wrong Details !";
 	}	
 }
+if(@$_GET['logout']=='true'){
+		$_SESSION = array();
+        session_destroy();
+       }
 ?>
 
 	<body class="login-layout">
@@ -111,21 +115,6 @@ if(isset($_POST['btn-login']))
 										
 									</div><!-- /.widget-body -->
 							</div><!-- /.position-relative -->
-
-							<div class="navbar-fixed-top align-right">
-								<br />
-								&nbsp;
-								<a id="btn-login-dark" href="#">Dark</a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-blur" href="#">Blur</a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-light" href="#">Light</a>
-								&nbsp; &nbsp; &nbsp;
-							</div>
 						</div>
 					</div><!-- /.col -->
 				</div><!-- /.row -->

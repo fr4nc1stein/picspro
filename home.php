@@ -1,6 +1,15 @@
 <?php 
+ob_start();
+session_start();
+
 //header scripts ( include css)
-include('header.php');?>
+include('header.php');
+require_once 'lib/class.php';
+
+//check session
+$system->session_check();
+
+?>
 
   <body class="no-skin">
     

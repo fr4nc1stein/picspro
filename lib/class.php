@@ -17,9 +17,14 @@
 				$row = $query->fetch(); 
 							
 			if( $count > 0 ) { 
-				$_SESSION['id']=$row['user_id'];
+
+				$_SESSION['isAdminLoggedIn']=1;
+				$_SESSION['user_id']=$row['user_id'];
 				$_SESSION['username']=$row['username'];
 				$_SESSION['user_type']=$row['user_type'];
+				$_SESSION['valid'] = true;
+         		$_SESSION['timeout'] = time();
+
 					return true;
 			}else{ 
 					return false;
@@ -60,13 +65,7 @@
 	{
 		header("Location: $url");
 	}
-	public function is_loggedin()
-	{
-		if(isset($_SESSION['user_id']))
-		{
-			return true;
-		}
-	}
+
 	public function logout()
 	{
 		session_destroy();
@@ -74,6 +73,15 @@
 		return true;
 	}
 
+	public function session_check()
+	{
+
+		if (trim($_SESSION['user_id']) == '') {
+    	header("location: index.php");
+		}
 	}
+}
+
 $system = new system($conn);
+
 ?>

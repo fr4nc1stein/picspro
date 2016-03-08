@@ -39,10 +39,6 @@ $rules = array(
 $data = $validator->filter($_POST, $filters);
 $validated = $validator->validate($data, $rules);
 
-
-
-
-print_r($validated);
 try
 		{
 $query = $conn->prepare("SELECT username FROM user WHERE username=:username");
