@@ -1,7 +1,7 @@
 <?php
 //iniatilize all the data
 
-include('header.php'); 
+include('template/header.php');
 
 //database class
 include('lib/class.php'); 
@@ -69,23 +69,11 @@ if($row['username']==$_POST['username']) {
 
 }
 ?>
-		<link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
-		<link rel="stylesheet" href="assets/css/chosen.min.css" />
-		<link rel="stylesheet" href="assets/css/datepicker.min.css" />
-		<link rel="stylesheet" href="assets/css/bootstrap-timepicker.min.css" />
-		<link rel="stylesheet" href="assets/css/daterangepicker.min.css" />
-		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
-		<link rel="stylesheet" href="assets/css/colorpicker.min.css" />
-		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
-
-		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
-
+		
   <body class="no-skin">
     
     <!-- #top navigation bar -->
-    <?php include('top-nav.php');?>
+    <?php include('template/top-nav.php');?>
 
     <div class="main-container" id="main-container">
       <script type="text/javascript">
@@ -93,7 +81,7 @@ if($row['username']==$_POST['username']) {
       </script>
 
       <!-- #side navigation bar -->
-      <?php include('sidebar.php');?>
+      <?php include('template/sidebar.php');?>
 
       <div class="main-content">
         <div class="main-content-inner">
@@ -320,6 +308,6 @@ if($row['username']==$_POST['username']) {
 						});
 						</script>-->
         </div>
-		<?php include('script.php'); ?>
+		<?php include('template/script.php'); ?>
     </body>
 </html>

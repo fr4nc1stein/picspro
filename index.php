@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-include('header.php');
+include('template/header.php');
 
 require_once 'lib/class.php';
 
@@ -128,6 +128,6 @@ if(@$_GET['logout']=='true'){
 			
 					
 </div>
-		<?php include('script.php'); ?>
+		<?php include('template/script.php'); ?>
     </body>
 </html>

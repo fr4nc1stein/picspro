@@ -3,7 +3,7 @@ ob_start();
 session_start();
 
 //header scripts ( include css)
-include('header.php');
+include('template/header.php');
 require_once 'lib/class.php';
 
 //check session
@@ -14,7 +14,7 @@ $system->session_check();
   <body class="no-skin">
     
     <!-- #top navigation bar -->
-    <?php include('top-nav.php');?>
+    <?php include('template/top-nav.php');?>
 
     <div class="main-container" id="main-container">
       <script type="text/javascript">
@@ -22,7 +22,7 @@ $system->session_check();
       </script>
 
       <!-- #side navigation bar -->
-      <?php include('sidebar.php');?>
+      <?php include('template/sidebar.php');?>
 
       <div class="main-content">
         <div class="main-content-inner">
@@ -121,6 +121,6 @@ $system->session_check();
       </a>
     </div><!-- /.main-container -->
 <?php 
-include('script.php');?>
+include('template/script.php');?>
   </body>
 </html>

@@ -40,3 +40,15 @@
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
   </head>
+  <link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
+  <link rel="stylesheet" href="assets/css/chosen.min.css" />
+  <link rel="stylesheet" href="assets/css/datepicker.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-timepicker.min.css" />
+  <link rel="stylesheet" href="assets/css/daterangepicker.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+  <link rel="stylesheet" href="assets/css/colorpicker.min.css" />
+  <!-- text fonts -->
+  <link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+
+  <!-- ace styles -->
+  <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
