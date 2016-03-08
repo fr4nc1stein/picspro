@@ -1,4 +1,4 @@
-![PICSPRO](https://raw.githubusercontent.com/fr4nc1stein/picspro/master/assets/images/logo.jpg =250x)
+![PICSPRO]<img src="https://raw.githubusercontent.com/fr4nc1stein/picspro/master/assets/images/logo.jpg" width="100">
 # PICSPro Registration System
 
 ##System pre-requisite.
