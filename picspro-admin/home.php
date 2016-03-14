@@ -4,7 +4,7 @@ session_start();
 
 //header scripts ( include css)
 include('template/header.php');
-require_once 'lib/class.php';
+require_once '../lib/class.php';
 
 //check session
 $system->session_check();

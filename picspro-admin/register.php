@@ -4,10 +4,10 @@
 include('template/header.php');
 
 //database class
-include('lib/class.php'); 
+include('../lib/class.php');
 
 //validator
-require "lib/gump.class.php";
+require "../lib/gump.class.php";
 $validator = new GUMP();
 
 if (isset($_POST['register']) && $_POST['csrftoken']=='jaSf3829nFjaSdf832rjNsdf')
@@ -42,16 +42,16 @@ $validated = $validator->validate($data, $rules);
 try
 		{
 $query = $conn->prepare("SELECT username FROM user WHERE username=:username");
-$query->execute(array(':username'=>$_POST['username']));	
+$query->execute(array(':username'=>$_POST['username']));
 $row = $query->fetch();
 if($row['username']==$_POST['username']) {
 				$error[] = "Sorry username already taken!";
-			} 
+			}
 			else
 			{
 			if($validated === TRUE){
 				if($system->register($data['username'],$data['password'],$data['fname'],$data['lname'])){
-					
+
 					$system->redirect('register.php?joined');
 				}else{
 					$system->redirect('register.php?error');
@@ -69,9 +69,9 @@ if($row['username']==$_POST['username']) {
 
 }
 ?>
-		
+
   <body class="no-skin">
-    
+
     <!-- #top navigation bar -->
     <?php include('template/top-nav.php');?>
 
@@ -125,7 +125,7 @@ if($row['username']==$_POST['username']) {
 								<form class="form-horizontal" role="form" method="post">
 
 									<input type="hidden" name="csrftoken" id="form-field-1" value="jaSf3829nFjaSdf832rjNsdf" class="col-xs-10 col-sm-5" />
-									
+
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Username </label>
 
@@ -158,7 +158,7 @@ if($row['username']==$_POST['username']) {
 										</div>
 									</div>
 
-									
+
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
 											<button class="btn btn-info" type="submit" name="register">
@@ -205,10 +205,10 @@ if($row['username']==$_POST['username']) {
 									</form>
 <!--
         <div class="form-box" id="login-box">
-             <div class="header"><i class="fa fa-sign-in"></i> Register</div> 	
+             <div class="header"><i class="fa fa-sign-in"></i> Register</div>
             <form method="post" id="register_form">
                 <div class="body bg-gray">
-					
+
 	<hr class="hr">
 	<div class="form-group">
 	<label>Username</label>
@@ -239,10 +239,10 @@ if($row['username']==$_POST['username']) {
       <input type="text"  name="lname" class="form-control"  placeholder="" required>
     </div>
 	</div>
-    
+
                 </div>
-                <div class="footer bg_grey1">                                                               
-                <button type="submit" name="register" class="btn bg-olive btn-block"><i class="fa fa-sign-in"></i> Register</button>  
+                <div class="footer bg_grey1">
+                <button type="submit" name="register" class="btn bg-olive btn-block"><i class="fa fa-sign-in"></i> Register</button>
                	 <?php
 			if(isset($error))
 			{
@@ -265,11 +265,11 @@ if($row['username']==$_POST['username']) {
 			}
 			?>
 
-               
+
 			   </div>
 
             </form>
-		-->	
+		-->
 			<!--
 					<script>
 						jQuery(document).ready(function(){
@@ -289,17 +289,17 @@ if($row['username']==$_POST['username']) {
 										$('#error').hide();
 										$("#correct").slideDown();
 										var delay = 2000;
-										setTimeout(function(){	window.location = 'register.php';   }, delay);  
+										setTimeout(function(){	window.location = 'register.php';   }, delay);
 									}else if (html == 'exist')
 									{
-									$('#exist').slideDown();	
+									$('#exist').slideDown();
 										var delay = 3000;
-										setTimeout(function(){	$('#error').slideUp();  }, delay);  
+										setTimeout(function(){	$('#error').slideUp();  }, delay);
 									}
 									else{
-									$('#error').slideDown();	
+									$('#error').slideDown();
 										var delay = 3000;
-										setTimeout(function(){	$('#error').slideUp();  }, delay);  
+										setTimeout(function(){	$('#error').slideUp();  }, delay);
 									}
 									}
 								});
