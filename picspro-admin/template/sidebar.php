@@ -36,6 +36,17 @@
 
                 <b class="arrow"></b>
               </li>
+
+                <li class="">
+                <a href="list#?=member">
+                  <i class="menu-icon fa fa-plus purple"></i>
+                  List of Member
+                </a>
+
+                <b class="arrow"></b>
+              </li>
+
+
             </ul>
           </li>
 
