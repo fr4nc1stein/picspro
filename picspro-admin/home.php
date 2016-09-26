@@ -94,7 +94,7 @@ $system->session_check();
         <div class="footer-inner">
           <div class="footer-content">
             <span class="bigger-120">
-              <span class="blue bolder">VirtualBytes Solution</span>
+              <span class="blue bolder">Project-AG</span>
               Application &copy; 2015-2016
             </span>
 
