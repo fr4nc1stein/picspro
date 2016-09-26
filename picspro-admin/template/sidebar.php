@@ -71,6 +71,15 @@
               </li>
             </ul>
           </li>
+
+           <li class="">
+            <a href="report#?graph">
+              <i class="menu-icon fa fa-list"></i>
+              <span class="menu-text"> Reports </span>
+            </a>
+
+            <b class="arrow"></b>
+          </li>
             </ul>
           </li>
         </ul><!-- /.nav-list -->

@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
 //iniatilize all the data
 
 include('template/header.php');
@@ -8,6 +10,10 @@ include('../lib/class.php');
 
 //validator
 require "../lib/gump.class.php";
+
+//check session
+$system->session_check();
+
 $validator = new GUMP();
 
 if (isset($_POST['register']) && $_POST['csrftoken']=='jaSf3829nFjaSdf832rjNsdf')
