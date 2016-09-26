@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2016 at 01:43 PM
+-- Generation Time: Sep 26, 2016 at 08:09 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -50,7 +50,8 @@ CREATE TABLE IF NOT EXISTS `member` (
 --
 
 INSERT INTO `member` (`email_address`, `member_type`, `gender`, `lastname`, `firstname`, `middlename`, `birthday`, `placeofbirth`, `company_name`, `company_address`, `position`, `residence_address`, `mobile_number`, `specialization`, `membership_other`, `date_registration`) VALUES
-('fr4nc1stein@gmail.com', 'new', 'Male', 'Victoriano', 'Francis', 'Alejandro', '2016-03-14', 'Tombokon Mem. Hospital', 'Marvericks', 'Lapaz', 'Senior Dev', 'Altavas Aklan', '9107224694', '1', '1', '2016-03-13');
+('fr4nc1stein@gmail.com', 'new', 'Male', 'Victoriano', 'Francis', 'Alejandro', '2016-03-14', 'Tombokon Mem. Hospital', 'Marvericks', 'Lapaz', 'Senior Dev', 'Altavas Aklan', '9107224694', '1', '1', '2016-03-13'),
+('icodexh@gmail.com', 'old', 'Male', 'Tein', 'Francis', 'Alejandro', '1992-07-15', 'Ginictan', 'Mavericks', 'General Luna', 'Sys Ad', 'Desin Street', '09107224695', 'Development', 'AG', '2016-09-21');
 
 -- --------------------------------------------------------
 
@@ -65,14 +66,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `fname` varchar(25) NOT NULL,
   `lname` varchar(25) NOT NULL,
   `user_type` varchar(100) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `fname`, `lname`, `user_type`) VALUES
-(20, 'projectag', '44f1960d62388e0b67cf88b41e0879df42a6273db0d885ac44e08cf01afa3abfd992cb792dcee8803effd91f07ac4b534ba71b7bc1d17bd569a1911dffdf7714', 'Francis', 'Victoriano', '');
+(20, 'projectag', 'b27ab5c5d0da9adf7f3a75c4d21959e59551d57a4ff17b47c41b793c689cad485a68304217fab305de77035015161d97afb3dea6027ce9c0d9f89d7eed50fd2c', 'Francis', 'Victoriano', ''),
+(21, 'projectag', 'projectag', 'Francis', 'Victoriano', '');
 
 --
 -- Indexes for dumped tables
@@ -98,7 +100,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
